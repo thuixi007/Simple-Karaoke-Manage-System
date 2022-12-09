@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0B3F6FF-F927-4996-BD41-0200E30B7C74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Simple_Karaoke_Manage_System</RootNamespace>
+    <AssemblyName>Simple Karaoke Manage System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.3.4, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Main.Designer.cs">
+      <DependentUpon>App_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ban_Hang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ban_Hang.Designer.cs">
+      <DependentUpon>Ban_Hang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\DAL.cs" />
+    <Compile Include="doi_mat_khau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="doi_mat_khau.Designer.cs">
+      <DependentUpon>doi_mat_khau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quan_Ly_Loai_SP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan_Ly_Loai_SP.Designer.cs">
+      <DependentUpon>Quan_Ly_Loai_SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_Ly_Phong_Hat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan_Ly_Phong_Hat.Designer.cs">
+      <DependentUpon>Quan_Ly_Phong_Hat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_ly_san_pham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan_ly_san_pham.Designer.cs">
+      <DependentUpon>Quan_ly_san_pham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_LY_Tai_Khoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quan_LY_Tai_Khoan.Designer.cs">
+      <DependentUpon>Quan_LY_Tai_Khoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Thanh_toan_hoa_don.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thanh_toan_hoa_don.Designer.cs">
+      <DependentUpon>Thanh_toan_hoa_don.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trang_Chu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Trang_Chu.Designer.cs">
+      <DependentUpon>Trang_Chu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XemDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XemDoanhThu.Designer.cs">
+      <DependentUpon>XemDoanhThu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="App_Main.resx">
+      <DependentUpon>App_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ban_Hang.resx">
+      <DependentUpon>Ban_Hang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="doi_mat_khau.resx">
+      <DependentUpon>doi_mat_khau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Quan_Ly_Loai_SP.resx">
+      <DependentUpon>Quan_Ly_Loai_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan_Ly_Phong_Hat.resx">
+      <DependentUpon>Quan_Ly_Phong_Hat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan_ly_san_pham.resx">
+      <DependentUpon>Quan_ly_san_pham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan_LY_Tai_Khoan.resx">
+      <DependentUpon>Quan_LY_Tai_Khoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thanh_toan_hoa_don.resx">
+      <DependentUpon>Thanh_toan_hoa_don.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trang_Chu.resx">
+      <DependentUpon>Trang_Chu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemDoanhThu.resx">
+      <DependentUpon>XemDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSourcesx\App_Main.datasource" />
+    <None Include="Properties\DataSourcesx\Ban_Hang.datasource" />
+    <None Include="Properties\DataSourcesx\Danh_Sach_Phong_BanHang_.datasource" />
+    <None Include="Properties\DataSourcesx\doi_mat_khau.datasource" />
+    <None Include="Properties\DataSourcesx\Login_Form.datasource" />
+    <None Include="Properties\DataSourcesx\Program.datasource" />
+    <None Include="Properties\DataSourcesx\Quan_Ly_Loai_SP.datasource" />
+    <None Include="Properties\DataSourcesx\Quan_Ly_Phong_Hat.datasource" />
+    <None Include="Properties\DataSourcesx\Quan_ly_san_pham.datasource" />
+    <None Include="Properties\DataSourcesx\Quan_LY_Tai_Khoan.datasource" />
+    <None Include="Properties\DataSourcesx\Simple_Karaoke_Manage_System.Class.DAL.datasource" />
+    <None Include="Properties\DataSourcesx\Simple_Karaoke_Manage_System.Properties.Resources.datasource" />
+    <None Include="Properties\DataSourcesx\Simple_Karaoke_Manage_System.Properties.Settings.datasource" />
+    <None Include="Properties\DataSourcesx\SqlServerTypes.Utilities.datasource" />
+    <None Include="Properties\DataSourcesx\Thanh_toan_hoa_don.datasource" />
+    <None Include="Properties\DataSourcesx\trang_chu.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Karaoke-logo-7D5E3FEDCB-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5229452.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seraphine-ocean-song-prestige-762x.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome_PNG78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
